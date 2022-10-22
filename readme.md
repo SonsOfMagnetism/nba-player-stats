@@ -1,4 +1,4 @@
-# NBA Stats Search App
+# NBA Player Stats
 
 A web application that will pull up NBA Stats for any player.
 
@@ -8,7 +8,7 @@ A web application that will pull up NBA Stats for any player.
 - CSS
 - JavaScript
 - jQuery
-- APIs
+- RapidApi
 - AJAX
 - Google Fonts
 
@@ -28,4 +28,4 @@ A web application that will pull up NBA Stats for any player.
 | 7 | Deploy App |
 
 ### Link to App
-[NBA Stats Search App](https://www.google.com)
+[NBA Player Stats](https://turmer-project1-rb5tjsoht-sonsofmagnetism.vercel.app/)
