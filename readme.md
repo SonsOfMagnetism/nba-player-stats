@@ -1,25 +1,31 @@
-# The Name of My App
+# NBA Stats Search App
 
-a description of my project
+A web application that will pull up NBA Stats for any player.
 
 ### Technologies Used
 
-- tech 1
-- tech 2
-- tech 3
-- tech 4
+- HTML
+- CSS
+- JavaScript
+- jQuery
+- APIs
+- AJAX
+- Google Fonts
 
 ### Wireframes
 
-![SomeText](https://www.boston.com/wp-content/uploads/2022/09/NBA_Finals_Warriors_Celtics_Basketball_15957-6329fec540dce-scaled.jpg)
+![SomeText](https://docs.google.com/drawings/d/e/2PACX-1vQ3X_I3qEf5Wfn97wXg8DSfzH-NhJMTrAQziD8p699H5CX3QrcnPOHF38u2VheNvC1xauwXDe-PZRrr/pub?w=960&h=720)
 
 ### Daily Plan
 | Day | Goal |
 |-----|------|
 | 1 | Choose API |
 | 2 | Render data to screen |
-| 3 | Create form |
+| 3 | Set-up HTML |
+| 4 | Style with CSS |
+| 5 | Add JavaScript |
+| 6 | Optimize Code |
+| 7 | Deploy App |
 
-### Link to Project
-[My Project Live Page]
-(https://ww.google.com)
+### Link to App
+[NBA Stats Search App](https://www.google.com)
