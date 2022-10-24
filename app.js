@@ -9,8 +9,20 @@ const settings = {
 	}
 };
 
+const idSettings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://api-nba-v1.p.rapidapi.com/players/statistics?season=2022&id=",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": "a2a63a7c59msha8758cc555ed553p136a91jsn192b7ec27de5",
+		"X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com"
+	}
+};
+
 const $form = $("form")
 const $fName = $('#fName')
+const $lName = $('20')
 
 
 function getStats(player) {
@@ -22,13 +34,22 @@ function getStats(player) {
 			const firstName = data.response[i].firstname
 			const lastName = data.response[i].lastname
 			if (search <= 1) {
-				$fName.append(`<span class="appended">Name: ${firstName} ${lastName}<br></span>`)
+				$fName.append(`<span class="appended">Name: ${firstName} ${lastName}</span>`)
 			} else {
 				$fName.append(`<span class="appended">Name: ${firstName} ${lastName}</span>` + "<br>")
 			}
-
-			console.log(data)
-			console.log(playerId)
+			$.ajax(idSettings.url + playerId, settings)
+			.then(data => {
+				for (let i = 0; i < data.response.length; i++) {
+					const games = data.response[i]
+					const points = games.points
+					const assists = games.assists
+					const reb = games.totReb
+					console.log()
+					
+				}
+				console.log(data)
+			})
 		}
 
 
