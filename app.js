@@ -21,38 +21,41 @@ const idSettings = {
 };
 
 const $form = $("form")
-const $fName = $('#fName')
-const $lName = $('20')
-
+const $name = $('#name')
+const $pts = $('#pts')
+const $asst = $('#asst')
+const $reb = $('#reb')
 
 function getStats(player) {
 	$.ajax(settings.url + player, settings)
 	.then((data) => {
+		// loop through each array
 		for (let i = 0; i < data.response.length; i++) {
 			const search = data.response[i];
 			const playerId = data.response[i].id
 			const firstName = data.response[i].firstname
 			const lastName = data.response[i].lastname
 			if (search <= 1) {
-				$fName.append(`<span class="appended">Name: ${firstName} ${lastName}</span>`)
+				$name.append(`<span class="appended">Name: ${firstName} ${lastName}</span>`)
 			} else {
-				$fName.append(`<span class="appended">Name: ${firstName} ${lastName}</span>` + "<br>")
+				$name.append(`<span class="appended">Name: ${firstName} ${lastName}</span>` + "<br>")
 			}
 			$.ajax(idSettings.url + playerId, settings)
 			.then(data => {
+				// loop through each array
 				for (let i = 0; i < data.response.length; i++) {
 					const games = data.response[i]
 					const points = games.points
 					const assists = games.assists
 					const reb = games.totReb
 					console.log()
-					
+					$pts.append(`<span class="appended">Points: ${points}</span>` + "<br>")
+					$asst.append(`<span class="appended">Assists: ${assists}</span>` + "<br>")
+					$reb.append(`<span class="appended">Rebounds: ${reb}</span>` + "<br>")
 				}
 				console.log(data)
 			})
 		}
-
-
 	})
 }
 
