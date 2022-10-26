@@ -1,3 +1,26 @@
 *{
     background-color: gray;
+    text-align: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* .grid-item{
+
+} */
+
+h1{
+    text-align: center;
+    background-color: darkolivegreen;
+}
+
+form{
+    text-align: center;
+}
+
+p{
+    text-align: center;
 }

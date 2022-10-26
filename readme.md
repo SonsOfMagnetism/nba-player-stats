@@ -4,8 +4,8 @@ A web application that will pull up NBA Stats for any player.
 
 ### Technologies Used
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 - jQuery
 - RapidApi

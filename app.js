@@ -26,41 +26,44 @@ const $pts = $('#pts')
 const $asst = $('#asst')
 const $reb = $('#reb')
 
-function getStats(player) {
-	$.ajax(settings.url + player, settings)
-	.then((data) => {
-		// loop through each array
-		for (let i = 0; i < data.response.length; i++) {
-			const search = data.response[i];
-			const playerId = data.response[i].id
-			const firstName = data.response[i].firstname
-			const lastName = data.response[i].lastname
-			if (search <= 1) {
-				$name.append(`<span class="appended">Name: ${firstName} ${lastName}</span>`)
-			} else {
-				$name.append(`<span class="appended">Name: ${firstName} ${lastName}</span>` + "<br>")
-			}
-			$.ajax(idSettings.url + playerId, settings)
-			.then(data => {
-				// loop through each array
-				for (let i = 0; i < data.response.length; i++) {
-					const games = data.response[i]
-					const points = games.points
-					const assists = games.assists
-					const reb = games.totReb
-					console.log()
-					$pts.append(`<span class="appended">Points: ${points}</span>` + "<br>")
-					$asst.append(`<span class="appended">Assists: ${assists}</span>` + "<br>")
-					$reb.append(`<span class="appended">Rebounds: ${reb}</span>` + "<br>")
-				}
-				console.log(data)
-			})
-		}
-	})
-}
-
-$form.submit((event) => {
+const subForm = $form.submit((event) => {
     event.preventDefault()
     const textInput = $("input[type=text]").val()
     getStats(textInput)
 })
+
+
+function getStats(player) {
+	$.ajax(settings.url + player, settings)
+	.then((data) => {
+
+		const info = data.response;
+		const arrLen = data.response.length
+		const playerId = data.response[0].id
+		const firstName = data.response[0].firstname
+		const lastName = data.response[0].lastname
+
+		$("#name").empty()
+		$(".appended").empty()
+		
+		$name.append(`Name: ${firstName} ${lastName}` + "<br>")
+			$.ajax(idSettings.url + playerId, settings)
+			.then(data => {
+
+				for (let i = 0; i < data.response.length; i++) {
+
+					const games = data.response[i]
+					const pts = games.points
+					const asst = games.assists
+					const reb = games.totReb
+					
+					$pts.append(`<span class="appended">${pts} <br></span>`)
+					$asst.append(`<span class="appended">${asst} <br></span>`)
+					$reb.append(`<span class="appended">${reb} <br></span>`)
+					
+				}
+				
+			})
+	})
+}
+
