@@ -1,26 +1,29 @@
 *{
-    background-color: gray;
+    background-color: beige;
+    font-family: roboto;
     text-align: center;
 }
 
-.grid-container{
+img{
+    width: 150px;
+    height: auto;
+    float: right;
+}
+
+.search{
     display: grid;
     grid-template-columns: auto auto auto;
+    border: 1px solid;
 }
 
-/* .grid-item{
-
-} */
+.stats{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    padding: 10px;
+}
 
 h1{
-    text-align: center;
     background-color: darkolivegreen;
-}
-
-form{
-    text-align: center;
-}
-
-p{
-    text-align: center;
+    color: white;
+    margin: 0;
 }

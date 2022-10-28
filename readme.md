@@ -27,5 +27,13 @@ A web application that will pull up NBA Stats for any player.
 | 6 | Optimize Code |
 | 7 | Deploy App |
 
+### Future Additions
+
+- Dates added to game stats
+- Ability to select players with same last name
+- Ability to select year for specific players stats
+- Pages for each team to select a player
+- Pages for each players career stats
+
 ### Link to App
-[NBA Player Stats](https://turmer-project1-rb5tjsoht-sonsofmagnetism.vercel.app/)
+[NBA Player Stats](https://nba-player-stats.vercel.app/)

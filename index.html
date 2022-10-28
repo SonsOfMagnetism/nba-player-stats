@@ -8,6 +8,9 @@
     src="https://code.jquery.com/jquery-3.6.1.js"
     integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
     crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <title>NBA Player Stats</title>
@@ -15,16 +18,26 @@
 <body>
     <main>
         <h1>2022 NBA Player Stats</h1>
-        <h5>Search stats for any active NBA player via last name</h5>
-        <form>
-            <input type="text" placeholder="Last Name of Player">
-            <input type="submit" value="Submit">
-            <p id="name" > </p>
-        </form>
-        <div class ="grid-container">
-            <p id="pts">Points: <br></p>
-            <p id="asst">Assists: <br></p>
-            <p id="reb">Rebounds: <br></p>
+        <div class="search">
+            <p id="logo"></p>
+            <form>
+                <h4>Search stats for any active NBA player via last name</h4>
+                <input type="text" placeholder="Last Name of Player">
+                <input type="submit" value="Submit">
+                <p id="name"> </p>
+            </form>
+        </div>
+        <div class ="stats">
+            <p id="mins"></p>
+            <p id="pts"></p>
+            <p id="fgm"></p>
+            <p id="fga"></p>
+            <p id="fgp"></p>
+            <p id="asst"></p>
+            <p id="reb"></p>
+            <p id="blk"></p>
+            <p id="stl"></p>
+            <p></p>
         </div>
     </main>
 </body>
