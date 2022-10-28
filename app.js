@@ -67,15 +67,15 @@ function getStats(player) {
 
 				$logo.append(`<span class="appended"><img src="${teamLogo}"></span>`)
 				$name.append(`Name: ${firstName} ${lastName} Position: ${pos}<br>Height: ${heightF}'${heightI} Weight: ${weight}lbs <br>Years Pro: ${yrsPro} College: ${college}`)
-				$pts.append(`<span class="appended">Points:<br></span>`)
-				$fgm.append(`<span class="appended">FGM:<br></span>`)
-				$fga.append(`<span class="appended">FGA:<br></span>`)
-				$fgp.append(`<span class="appended">FGP:<br></span>`)
-				$asst.append(`<span class="appended">Assists:<br></span>`)
-				$reb.append(`<span class="appended">Rebounds:<br></span>`)
-				// $blk.append(`<span class="appended">Blocks:<br></span>`)
-				// $stl.append(`<span class="appended">Steals:<br></span>`)
-				// $mins.append(`<span class="appended">Minutes:<br></span>`)
+				$pts.append(`<span class="appended">Points<br></span>`)
+				$fgm.append(`<span class="appended">FGM<br></span>`)
+				$fga.append(`<span class="appended">FGA<br></span>`)
+				$fgp.append(`<span class="appended">FGP<br></span>`)
+				$asst.append(`<span class="appended">Assists<br></span>`)
+				$reb.append(`<span class="appended">Rebounds<br></span>`)
+				// $blk.append(`<span class="appended">Blocks<br></span>`)
+				// $stl.append(`<span class="appended">Steals<br></span>`)
+				// $mins.append(`<span class="appended">Minutes<br></span>`)
 
 				for (let i = 0; i < data.response.length; i++) {
 
